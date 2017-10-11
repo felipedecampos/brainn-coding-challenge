@@ -7,8 +7,7 @@ import os
 
 
 # Create your views here.
-def home(request):
-    user = 'gustavohenrique'
+def getRepositories(username):
     query = '''
       query {
         user(login: "%s") {
@@ -36,12 +35,11 @@ def home(request):
             }
           }
         }
-      }''' % user
+      }''' % username
     headers = {'Authorization': 'bearer {0}'.format(os.getenv('GITHUB_API_TOKEN'))}
     url = 'https://api.github.com/graphql'
     transport = RequestsHTTPTransport(url, headers=headers, use_json=True)
     client = Client(transport=transport)
     resp = client.execute(gql(query))
     repositories = resp.get('user').get('starredRepositories')
-    print(repositories)
-    return HttpResponse('200')
+    return repositories
