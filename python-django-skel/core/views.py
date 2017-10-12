@@ -1,15 +1,13 @@
-from django.db import IntegrityError
 from django.shortcuts import render
-from django.http import HttpResponse
-
 from gql import gql, Client
 from gql.transport.requests import RequestsHTTPTransport
 import os
+from django.db import IntegrityError
 from core.models import Repository
 
 
 # Create your views here.
-def getRepositories(username, page=False):
+def get_repositories(username, page=False):
     pagination = "" if not page else ', after: "' + page + '"'
     query = '''
       query {
@@ -68,6 +66,11 @@ def getRepositories(username, page=False):
             continue
 
         if repositories.get('pageInfo').get('hasNextPage'):
-            getRepositories(username, repositories.get('pageInfo').get('endCursor'))
+            get_repositories(username, repositories.get('pageInfo').get('endCursor'))
 
     return True
+
+
+def repository_list(request):
+    repositories = Repository.objects.all()
+    return render(request, 'core/repository_list.html', {'repositories': repositories})

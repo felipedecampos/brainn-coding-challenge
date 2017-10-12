@@ -11,7 +11,7 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         try:
             print('Getting all repositories from: ' + options['username'])
-            result = views.getRepositories(options['username'])
+            result = views.get_repositories(options['username'])
             print('All repository was saved' if result else 'Houston we have a problem!')
         except Exception as e:
             raise CommandError(repr(e))
