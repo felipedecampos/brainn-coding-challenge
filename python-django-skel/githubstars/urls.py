@@ -20,5 +20,6 @@ from core import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^repositories-as-json$', views.repository_list_as_json, name='repository_list_as_json'),
     url(r'^', views.repository_list, name='repository_list'),
 ]

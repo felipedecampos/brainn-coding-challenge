@@ -52,9 +52,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'githubstars.urls'
 
-TEMPLATE_DIRS = (
-    "core/templates",
-)
+TEMPLATE_DIRS = ()
 
 TEMPLATES = [
     {

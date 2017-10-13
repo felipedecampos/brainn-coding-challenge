@@ -3,6 +3,8 @@ from gql import gql, Client
 from gql.transport.requests import RequestsHTTPTransport
 import os
 from django.db import IntegrityError
+from django.core import serializers
+from django.http import HttpResponse
 from core.models import Repository
 
 
@@ -38,7 +40,7 @@ def get_repositories(username, page=False):
         }
       }''' % (username, pagination)
 
-    headers = {'Authorization': 'bearer {0}'.format(os.getenv('GITHUB_API_TOKEN'))}
+    headers = {'Authorization': 'bearer {0}'.format(os.getenv('TEMPLATE_DIRS'))}
     url = 'https://api.github.com/graphql'
     transport = RequestsHTTPTransport(url, headers=headers, use_json=True)
     client = Client(transport=transport)
@@ -74,3 +76,9 @@ def get_repositories(username, page=False):
 def repository_list(request):
     repositories = Repository.objects.all()
     return render(request, 'core/repository_list.html', {'repositories': repositories})
+
+
+def repository_list_as_json(request):
+    object_list = Repository.objects.all()
+    json = serializers.serialize('json', object_list)
+    return HttpResponse(json, content_type='application/json')

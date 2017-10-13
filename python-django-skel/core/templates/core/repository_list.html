@@ -1,63 +1,52 @@
 {% extends 'core/base.html' %}
 
 {% block content %}
-        <div class="row mt-5">
-            <div class="col-12">
-                <h1 class="page-header">Repositories</h1>
+    <header>
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="/" class="navbar-brand">Repositories</a>
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse" id="navbar-main">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Challenge for developers</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
+    </header>
 
-        <!-- SEARCH SECTION -->
-        <div class="form-group row mt-5">
-            <label for="search-tag" class="col-2 col-form-label font-weight-bold">Search: </label>
-            <div class="col-10">
-                <input type="text" id="" name="search-tag" class="form-control" placeholder="Search by TAGs">
-            </div>
+    <div class="row bs-section">
+        <div class="col-12">
+            <table class="table table-hover table-striped display" id="repository-table" cellspacing="0" width="100%" data-url="{% url 'repository_list_as_json' %}">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>USERNAME</th>
+                        <th>REPOSITORY ID</th>
+                        <th>NAME</th>
+                        <th>URL</th>
+                        <th>LANGUAGES</th>
+                        <th>TAGS</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>#</th>
+                        <th>USERNAME</th>
+                        <th>REPOSITORY ID</th>
+                        <th>NAME</th>
+                        <th>URL</th>
+                        <th>LANGUAGES</th>
+                        <th>TAGS</th>
+                    </tr>
+                </tfoot>
+            </table>
         </div>
-
-        <div class="row mt-5">
-            <div class="col-12">
-                <table class="table table-hover table-striped" id="repository-table">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>USERNAME</th>
-                            <th>REPOSITORY ID</th>
-                            <th>NAME</th>
-                            <th>URL</th>
-                            <th>LANGUAGES</th>
-                            <th>TAGS</th>
-                        </tr>
-                    </thead>
-                    <tfoot>
-                        <tr>
-                            <td>#</td>
-                            <td>USERNAME</td>
-                            <td>REPOSITORY ID</td>
-                            <td>NAME</td>
-                            <td>URL</td>
-                            <td>LANGUAGES</td>
-                            <td>TAGS</td>
-                        </tr>
-                    </tfoot>
-                    <tbody>
-                        {% for repository in repositories %}
-                            <tr>
-                                <td>{{ repository.id }}</td>
-                                <td>{{ repository.username }}</td>
-                                <td>{{ repository.repository_id }}</td>
-                                <td>{{ repository.name }}</td>
-                                <td>{{ repository.url }}</td>
-                                <td>{{ repository.languages }}</td>
-                                <td>{{ repository.tags }}</td>
-                            </tr>
-                            {% empty %}
-                            <tr>
-                                <td colspan="7" class="text-center bg-warning">No repository</td>
-                            </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-        </div>
+    </div>
 {% endblock %}
