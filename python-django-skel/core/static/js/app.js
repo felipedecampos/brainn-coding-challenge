@@ -8,7 +8,6 @@ $(document).ready(function() {
          },
          "columns": [
              { "data": "pk", "searchable": false },
-             { "data": "fields.username", "searchable": false },
              { "data": "fields.repository_id", "searchable": false },
              { "data": "fields.name", "searchable": false },
              { "data": "fields.url", "searchable": false },
@@ -17,7 +16,7 @@ $(document).ready(function() {
              { "data": "fields.repository_id", "searchable": false }
          ],
          "columnDefs": [{
-              "targets": 6,
+              "targets": 5,
               "render": function ( data, type, row, meta ) {
                   if (data !== "") {
                       var labels        = String(data).toLowerCase().split(/\s*,\s*/).filter(function(value) { return value });
@@ -41,7 +40,7 @@ $(document).ready(function() {
               }
           },
          {
-              "targets": 7,
+              "targets": 6,
               "render": function ( data, type, row, meta ) {
                   return '<button type="button" class="btn btn-success" data-toggle="modal" data-target="#add-tags-modal" data-repository-id="'+data+'">' +
                       'Add tags' +
@@ -59,7 +58,7 @@ $('#add-tags-modal').on('show.bs.modal', function (event) {
     var repository_id = button.data('repository-id');
     var modal = $(this);
 
-    modal.find('.modal-title').text('Add tags to: ' + button.parent().parent().find('>:nth-child(4)').text());
+    modal.find('.modal-title').text('Add tags to: ' + button.parent().parent().find('>:nth-child(3)').text());
     modal.find('.modal-body #repository-id, .modal-body #tags').val("");
     modal.find('.modal-body #repository-id').val(repository_id);
 });

@@ -56,15 +56,14 @@ def get_repositories(username, page=False):
                 languages.append(language.get('node').get('name'))
 
         try:
-            entityRepository = Repository(
-                username=username,
+            entity_repository = Repository(
                 repository_id=repository.get('node').get('id'),
                 name=repository.get('node').get('name'),
                 url=repository.get('node').get('url'),
                 languages=", ".join(languages),
                 tags="",
             )
-            entityRepository.save()
+            entity_repository.save()
         except IntegrityError:
             continue
 
@@ -72,6 +71,10 @@ def get_repositories(username, page=False):
             get_repositories(username, repositories.get('pageInfo').get('endCursor'))
 
     return True
+
+
+def clean_repositories():
+    return Repository.objects.all().delete()
 
 
 def repository_list(request):
