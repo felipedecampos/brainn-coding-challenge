@@ -1,3 +1,90 @@
+# Projeto: Challenge for developers
+
+## Resumo
+
+Este projeto foi desenvolvimento como base de teste de conhecimento para a empresa [Brainn.co](http://brainn.co/)
+
+### Pré-requisito
+
+* [Python](https://www.python.org/downloads/) versão > 3. *
+* [Git](https://desktop.github.com/)
+* Virtualenv
+```
+$ pip install virtualenv
+```
+* Django
+```
+$ pip install django==1.11.6
+```
+
+Verifique se tem todos os pré requisitos:
+```
+$ git --version
+```
+```
+$ python3 -V
+```
+```
+$ virtualenv env
+```
+```
+$ python
+>>> import django
+>>> django.get_version()
+```
+### Instalação
+
+Clone o repositório do projeto: 
+```
+$ git clone https://github.com/felipedecampos/challenge-for-developers.git
+```
+Instale todos os pacotes do arquivo: /python-django-skel/requirements.txt
+
+Execute os seguintes comandos no terminal para instalar os pacotes:,
+
+Linux:
+```
+$ pip3 install -r requirements.txt
+```
+Windows
+```
+$ python -m pip install -U pip setuptools
+```
+```
+$ python -m pip install matplotlib
+```
+
+## Rodar testes automatizados
+
+Explicar como rodar os testes automatizados para o sistema
+
+### Testes de ponta a ponta
+
+Explicar o que esses testes testam e por quê.
+
+exemplos...
+
+## Desenvolvido com:
+
+* [Django](https://docs.djangoproject.com/en/1.11/) - The web framework used
+* [Python](https://www.python.org/doc/) - Dependency Management
+
+## Versionamento
+
+Usado [Git](https://git-scm.com/doc) para versionamento. Para visualizar as versões disponíveis, veja [tags do repositório](https://github.com/felipedecampos/challenge-for-developers/tags).
+
+## Autor
+
+* **Felipe de Campos**
+* [Site pessoal](http://site.felipedecampos.com.br) 
+* [Github](https://github.com/felipedecampos)
+
+## Licença
+
+Este projeto não possui licença
+
+# Instruções do solicitante (Brainn.co):
+
 ## Overview
 
 O Github é uma rede social de programadores que possui uma funcionalidade interessante que permite curtir o repositório alheio. Trata-se de um botão escrito Star encontrado na página de cada repositório.  
@@ -140,65 +227,3 @@ Entendemos as dificuldades do dia-a-dia para quem trabalha em ter que dedicar um
 Qualquer dúvida pode entrar em contato conosco.  
 
 Boa sorte!!!
-
-
-# Projeto: Challenge for developers
-
-## Overview
-
-Este projeto foi desenvolvimento como base de teste de conhecimento para a empresa [Brainn.co](http://brainn.co/)
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Pré-requisito
-
-[Python](https://www.python.org/downloads/) versão .3.*
-[Git](https://desktop.github.com/)
-[Virtualenv]: $ pip install virtualenv
-[Django]: $ pip install django==1.11.6
-
-Verifique se tem todos os pré requisitos:
-
-$ git --version
-$ python3 -V
-$ virtualenv env
-$ python
->>> import django
->>> django.get_version()
-
-### Instalação
-
-Clone o repositório do projeto: $ git clone https://github.com/felipedecampos/challenge-for-developers.git
-Instale todos os pacotes do arquivo: /python-django-skel/requirements.txt
-Execute os seguintes comandos no terminal para instalar os pacotes:
-Linux:
-    - $ pip3 install -r requirements.txt
-Windows
-    - $ python -m pip install -U pip setuptools
-    - $ python -m pip install matplotlib
-
-## Rodar testes automatizados
-
-Explicar como rodar os testes automatizados para o sistema
-
-### Testes de ponta a ponta
-
-Explicar o que esses testes testam e por quê.
-
-exemplos...
-
-## Desenvolvido com:
-
-* [Django](https://docs.djangoproject.com/en/1.11/) - The web framework used
-* [Python](https://www.python.org/doc/) - Dependency Management
-
-## Versionamento
-
-Usado [Git](https://git-scm.com/doc) para versionamento. Para visualizar as versões disponíveis, veja [tags do repositório](https://github.com/felipedecampos/challenge-for-developers/tags).
-
-## Autor
-
-* **Felipe de Campos** - *Initial work* - [@felipedecampos](https://github.com/felipedecampos)
-
-## Licença
-
-Este projeto não possui licença
