@@ -21,5 +21,7 @@ from core import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^repositories-as-json$', views.repository_list_as_json, name='repository_list_as_json'),
+    url(r'^repositories-add-tags$', views.repository_add_tags, name='repository_add_tags'),
+    url(r'^repositories-delete-tag$', views.repository_delete_tag, name='repository_delete_tag'),
     url(r'^', views.repository_list, name='repository_list'),
 ]
