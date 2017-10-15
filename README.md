@@ -4,6 +4,8 @@
 
 Este projeto foi desenvolvimento como base de teste de conhecimento para a empresa [Brainn.co](http://brainn.co/)
 
+* [Instruções do solicitante](https://github.com/felipedecampos/challenge-for-developers#instruções-do-solicitante-brainnco)
+
 ### Pré-requisito
 
 * [Python](https://www.python.org/downloads/) versão > 3. *
