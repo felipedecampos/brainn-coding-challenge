@@ -18,6 +18,10 @@ $ pip install virtualenv
 ```
 $ pip install django==1.11.6
 ```
+* Behave
+```
+$ pip install behave
+```
 
 Verifique se tem todos os pré requisitos:
 ```
@@ -34,6 +38,10 @@ $ python
 >>> import django
 >>> django.get_version()
 ```
+```
+$ python -m behave --version
+```
+
 ### Instalação
 
 Clone o repositório do projeto: 
@@ -67,15 +75,16 @@ Windows:
 $ set GITHUB_API_TOKEN=SEU_TOKEN_GITHBUB
 ```
 
-## Rodar testes automatizados
+## Rodar testes
 
-Explicar como rodar os testes automatizados para o sistema
-
-### Testes de ponta a ponta
-
-Explicar o que esses testes testam e por quê.
-
-exemplos...
+Para rodar os testes de comportamento entre na pasta /tests/BDD
+```
+$ cd python-django-skel/core/tests/BDD
+```
+Verificando o ambiente
+```
+$ behave features/environment.feature
+```
 
 ## Desenvolvido com:
 
