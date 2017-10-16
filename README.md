@@ -48,12 +48,23 @@ Linux:
 ```
 $ pip3 install -r requirements.txt
 ```
-Windows
+Windows:
 ```
 $ python -m pip install -U pip setuptools
 ```
 ```
 $ python -m pip install matplotlib
+```
+
+Adicione seu TOKEN do GITHUB em uma variável de ambiente
+
+Linux:
+```
+$ export GITHUB_API_TOKEN=SEU_TOKEN_GITHBUB
+```
+Windows:
+```
+$ set GITHUB_API_TOKEN=SEU_TOKEN_GITHBUB
 ```
 
 ## Rodar testes automatizados
