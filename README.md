@@ -48,11 +48,11 @@ Adicione seu TOKEN do GITHUB em uma variável de ambiente
 
 Linux:
 ```
-$ export GITHUB_API_TOKEN=SEU_TOKEN_GITHBUB
+$ export GITHUB_API_TOKEN=SEU_TOKEN_GITHUB
 ```
 Windows:
 ```
-$ set GITHUB_API_TOKEN=SEU_TOKEN_GITHBUB
+$ set GITHUB_API_TOKEN=SEU_TOKEN_GITHUB
 ```
 Rode o migration
 ```
