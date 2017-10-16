@@ -54,6 +54,13 @@ Windows:
 ```
 $ set GITHUB_API_TOKEN=SEU_TOKEN_GITHBUB
 ```
+Rode o migration
+```
+$ cd python-django-skel
+```
+```
+$ python manage.py migrate
+```
 
 ## Rodar testes
 
@@ -71,7 +78,10 @@ $ behave features/environment.feature
 $ cd python-django-skel
 ```
 ```
-$ python manage.pyrunserver
+$ python manage.py get-repositories YOUR_GITHUB_USERNAME
+```
+```
+$ python manage.py runserver
 ```
 No Browser digite o host exibido no console
 
