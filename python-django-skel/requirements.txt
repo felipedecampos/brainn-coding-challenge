@@ -1,3 +1,4 @@
+behave==1.2.5
 Brlapi==0.6.2
 certifi==2017.7.27.1
 chardet==3.0.4
@@ -13,6 +14,8 @@ Mako==1.0.0
 MarkupSafe==0.23
 mccabe==0.6.1
 model-mommy==1.4.0
+parse==1.8.2
+parse-type==0.4.2
 promise==2.0.2
 py==1.4.34
 pycodestyle==2.3.1
@@ -32,3 +35,4 @@ requests==2.18.4
 six==1.11.0
 typing==3.6.2
 urllib3==1.22
+virtualenv==1.11.6
