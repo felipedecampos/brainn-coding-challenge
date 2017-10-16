@@ -10,10 +10,6 @@ Funcionalidade: Verificando instalacao do GIT
         Dado que temos Python instalado
         Quando eu executo o comando "python3 -V" no terminal para verificar a versao do Python
         Entao eu deveria ver "Python" mais a versao do Python
-    Cenario: Verificar se o VIRTUALENV está instalado
-        Dado que temos o VIRTUALENV instalado
-        Quando eu executo o comando "virtualenv --version" no terminal para verificar a versao do VIRTUALENV
-        Entao eu deveria ver a versao do VIRTUALENV
     Cenario: Verificar se existe o package Django instalado
         Dado que temos o Django instalado
         Quando eu executo os seguintes comando "python" "import django" "django.get_version()" no terminal para verificar a versao do Django

@@ -10,36 +10,13 @@ Este projeto foi desenvolvimento como base de teste de conhecimento para a empre
 
 * [Python](https://www.python.org/downloads/) versão > 3. *
 * [Git](https://desktop.github.com/)
-* Virtualenv
-```
-$ pip install virtualenv
-```
-* Django
-```
-$ pip install django==1.11.6
-```
-* Behave
-```
-$ pip install behave
-```
 
 Verifique se tem todos os pré requisitos:
-```
-$ git --version
-```
 ```
 $ python3 -V
 ```
 ```
-$ virtualenv env
-```
-```
-$ python
->>> import django
->>> django.get_version()
-```
-```
-$ python -m behave --version
+$ git --version
 ```
 
 ### Instalação
@@ -48,6 +25,9 @@ Clone o repositório do projeto:
 ```
 $ git clone https://github.com/felipedecampos/challenge-for-developers.git
 ```
+
+Crie e ative um virtualenv
+
 Instale todos os pacotes do arquivo: /python-django-skel/requirements.txt
 
 Execute os seguintes comandos no terminal para instalar os pacotes:,
@@ -85,6 +65,15 @@ Verificando o ambiente
 ```
 $ behave features/environment.feature
 ```
+
+## Rodando a aplicação
+```
+$ cd python-django-skel
+```
+```
+$ python manage.pyrunserver
+```
+No Browser digite o host exibido no console
 
 ## Desenvolvido com:
 
